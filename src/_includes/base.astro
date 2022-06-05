@@ -1,31 +1,26 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" /> -->
-	<title>{title}</title>
+  <title>{title}</title>
 </head>
+
 <body>
-	<slot />
+  <slot />
 </body>
+
 </html>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        background: #000;
-        color:#fff;
-    }
 </style>

@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 import lit from '@astrojs/lit'
 
 // integration with lit
