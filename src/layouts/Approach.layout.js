@@ -36,6 +36,15 @@ export class ApproachLayout extends LitElement {
         font-size: var(--size--text);
         color: var(--color--gray--light);
       }
+      @media (min-width:900px) {
+        .content-approach {
+          flex-direction: row;
+          gap: 48px;
+        }
+        .approach{
+          border-top:4px solid var(--color--gray--light);
+        }
+      }
     `,
   ];
 

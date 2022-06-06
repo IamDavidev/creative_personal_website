@@ -12,7 +12,7 @@ export class LasWorksLayout extends LitElement {
     css`
       :host {
         display: block;
-        margin:70px 0 ;
+        margin: 70px 0;
       }
       img {
         width: 100%;
@@ -85,6 +85,13 @@ export class LasWorksLayout extends LitElement {
       .work-grid__invesmet > span {
         margin: 20px 0;
       }
+      @media (min-width: 900px) {
+        .latest {
+          display: flex;
+          flex-direction: row;
+          gap: 100px;
+        }
+      }
     `,
   ];
 
@@ -92,11 +99,13 @@ export class LasWorksLayout extends LitElement {
     return html`
       <section>
         <div class="latest">
+      <div>
           <h2 class="latest__title">Latest Works</h2>
-          <div class="latest__description">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-        </div>
-        <message-me></message-me>
+          <p class="latest__description">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+          </p>
+          <message-me></message-me>
+          </div>
         <section class="works-grid">
           <article class="work-grid__digart">
           <div>

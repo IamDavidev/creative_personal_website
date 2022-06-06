@@ -18,6 +18,7 @@ export class Base extends LitElement {
         color: var(--color--white);
         min-height: 100vh;
         padding: var(--padding--container);
+        overflow:hidden;
       }
       .nav-website {
         display: flex;

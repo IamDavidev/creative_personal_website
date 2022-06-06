@@ -20,13 +20,15 @@ export class AboutLayout extends LitElement {
 
       .about-figure {
         margin: 0;
-        padding: 0;
+        padding: 1rem;
+        box-sizing: border-box;
         display: flex;
         justify-content: center;
         margin-top: 56px;
         margin-bottom: 37px;
       }
       .about-figure__image {
+        max-width: 100%;
         object-fit: cover;
         border-radius: 1rem;
       }
@@ -50,6 +52,19 @@ export class AboutLayout extends LitElement {
         gap: 10px;
         margin: 1rem 4rem;
       }
+      @media (min-width: 900px) {
+        .content-about {
+          display: flex;
+          gap: 100px;
+        }
+        .skills__list {
+          width: 400px;
+          gap: 100px;
+        }
+        .skills__list > li {
+          margin: 0;
+        }
+      }
     `,
   ];
 
@@ -57,37 +72,39 @@ export class AboutLayout extends LitElement {
     return html`
       <section class="about">
         <h2 class="about-me">About me</h2>
-        <figure class="about-figure">
-          <img src="${about}" alt="development" class="about-figure__image" />
-        </figure>
-        <div class="skills">
-          <p class="skills__description">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-          </p>
-          <h3 class="skills__other">Other Skills</h3>
-          <ul class="skills__list">
-            <li>
-              <img src="${development}" alt="development" />
-              <span>Development</span>
-            </li>
-            <li>
-              <img src="${photagrahy}" alt="photography" /><span
-                >Photography</span
-              >
-            </li>
-            <li>
-              <img src="${illustrating}" alt="illustrating" /><span
-                >Illustrating</span
-              >
-            </li>
-            <li>
-              <img src="${research}" alt="user" /><span>User Research</span>
-            </li>
-          </ul>
+        <div class="content-about">
+          <figure class="about-figure">
+            <img src="${about}" alt="development" class="about-figure__image" />
+          </figure>
+          <div class="skills">
+            <p class="skills__description">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <h3 class="skills__other">Other Skills</h3>
+            <ul class="skills__list">
+              <li>
+                <img src="${development}" alt="development" />
+                <span>Development</span>
+              </li>
+              <li>
+                <img src="${photagrahy}" alt="photography" /><span
+                  >Photography</span
+                >
+              </li>
+              <li>
+                <img src="${illustrating}" alt="illustrating" /><span
+                  >Illustrating</span
+                >
+              </li>
+              <li>
+                <img src="${research}" alt="user" /><span>User Research</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     `;

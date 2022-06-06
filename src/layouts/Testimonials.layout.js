@@ -18,6 +18,12 @@ export class TestimonialsLayout extends LitElement {
         gap:12px;
         animation: animation-testimonials 10s ease-in-out infinite;
       }
+
+      @media (min-width:900px){
+        .carousel-testimonials{
+          animation: none;
+        }
+      }
       @keyframes animation-testimonials {
         0% {
           transform: translateX(-140%);
@@ -25,9 +31,6 @@ export class TestimonialsLayout extends LitElement {
         100%{
           transform: translateX(140%);
         }
-        /* 100%{
-          transform: translateX(0);
-        } */
       }
     `,
   ];
